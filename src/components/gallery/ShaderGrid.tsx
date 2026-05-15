@@ -1,5 +1,6 @@
-import ShaderCard from './ShaderCard'
 import type { ShaderMeta } from '@/types/shader'
+
+import ShaderCard from './ShaderCard'
 
 interface Props {
   shaders: ShaderMeta[]

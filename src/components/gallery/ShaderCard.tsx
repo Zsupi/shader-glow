@@ -1,7 +1,8 @@
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Card } from '@/components/ui/card'
+
 import { Badge } from '@/components/ui/badge'
+import { Card } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 import type { ShaderMeta } from '@/types/shader'
 
@@ -16,7 +17,9 @@ const ShaderCard = ({ shader, onOpen }: Props) => {
 
   return (
     <Card
-      onClick={() => onOpen(shader)}
+      onClick={() => {
+        onOpen(shader)
+      }}
       className={cn(
         'group cursor-pointer overflow-hidden rounded-xl border p-0 transition-all duration-300',
         'bg-[hsl(var(--shader-surface))] border-[hsl(var(--shader-border))]',
@@ -28,9 +31,7 @@ const ShaderCard = ({ shader, onOpen }: Props) => {
         <canvas ref={canvasRef} className="h-full w-full" />
       </div>
       <div className="space-y-2 p-4">
-        <h3 className="text-base font-semibold text-[hsl(var(--shader-text))]">
-          {shader.title}
-        </h3>
+        <h3 className="text-base font-semibold text-[hsl(var(--shader-text))]">{shader.title}</h3>
         <p className="text-xs text-[hsl(var(--shader-muted))]">
           {t('card.by', { author: shader.author })}
         </p>

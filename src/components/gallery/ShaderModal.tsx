@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { cn } from '@/lib/utils'
 import type { ShaderMeta } from '@/types/shader'
@@ -14,7 +15,12 @@ const ShaderModal = ({ shader, onClose }: Props) => {
   const { t } = useTranslation()
 
   return (
-    <Dialog open={!!shader} onOpenChange={(o) => !o && onClose()}>
+    <Dialog
+      open={!!shader}
+      onOpenChange={(o) => {
+        if (!o) onClose()
+      }}
+    >
       <DialogContent
         className={cn(
           'flex max-w-none flex-col items-center gap-4 border p-6 sm:rounded-xl',
