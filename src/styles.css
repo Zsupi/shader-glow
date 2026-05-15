@@ -95,6 +95,15 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  /* Shader Gallery palette */
+  --shader-bg: 220 20% 6%;
+  --shader-surface: 220 16% 10%;
+  --shader-border: 195 60% 18%;
+  --shader-accent: 187 80% 48%;
+  --shader-accent-glow: 187 100% 60%;
+  --shader-muted: 210 15% 45%;
+  --shader-text: 200 20% 90%;
 }
 
 .dark {
