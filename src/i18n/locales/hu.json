@@ -1,0 +1,7 @@
+{
+  "app.title": "Shader Galéria",
+  "app.tagline": "Fragment shaderek. Élőben. Interaktívan.",
+  "nav.toggleTheme": "Téma váltása",
+  "card.by": "{{author}} alkotása",
+  "modal.close": "Bezárás"
+}

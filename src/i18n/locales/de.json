@@ -1,0 +1,7 @@
+{
+  "app.title": "Shader Galerie",
+  "app.tagline": "Fragment-Shader. Live. Interaktiv.",
+  "nav.toggleTheme": "Thema wechseln",
+  "card.by": "von {{author}}",
+  "modal.close": "Schließen"
+}
