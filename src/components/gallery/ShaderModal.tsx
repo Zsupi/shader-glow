@@ -1,6 +1,5 @@
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { X } from 'lucide-react'
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { cn } from '@/lib/utils'
 import type { ShaderMeta } from '@/types/shader'
@@ -22,20 +21,8 @@ const ShaderModal = ({ shader, onClose }: Props) => {
           'w-[92vw] bg-[hsl(var(--shader-surface))] border-[hsl(var(--shader-border))]',
           'text-[hsl(var(--shader-text))]',
         )}
-        showCloseButton={false}
       >
         <DialogTitle className="sr-only">{shader?.title ?? ''}</DialogTitle>
-        <button
-          onClick={onClose}
-          aria-label={t('modal.close')}
-          className={cn(
-            'absolute right-4 top-4 rounded-md p-2 transition-colors',
-            'text-[hsl(var(--shader-muted))] hover:text-[hsl(var(--shader-accent-glow))]',
-            'hover:bg-[hsl(var(--shader-bg))]',
-          )}
-        >
-          <X className="h-5 w-5" />
-        </button>
         {shader && (
           <>
             <div
